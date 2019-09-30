@@ -12,7 +12,7 @@ minetest.register_craft({
 	type = "cooking",
 	output = "basics:charcoal_block",
 	recipe = "group:tree",
-	cooktime = 5,
+	cooktime = 15,
 })
 
 minetest.register_craft({
@@ -29,11 +29,26 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "default:tourch",
+	type = "fuel",
+	recipe = "basics:charcoal_block",
+	burntime = "600",
+})
+
+minetest.register_craft({
+	output = "default:torch 4",
 	recipe = {
 		{"","",""},
 		{"", "basics:charcoal", ""},
 		{"", "default:stick", ""},
+	},
+})
+
+minetest.register_craft({
+	output = "default:charcoal_block",
+	recipe = {
+		{"basics:charcoal","basics:charcoal","basics:charcoal"},
+		{"basics:charcoal", "basics:charcoal", "basics:charcoal"},
+		{"basics:charcoal", "basics:charcoal", "basics:charcoal"},
 	},
 })
 
