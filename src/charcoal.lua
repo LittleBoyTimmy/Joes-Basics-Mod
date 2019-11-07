@@ -60,3 +60,11 @@ minetest.register_node("basics:charcoal_block", {
   groups = {cracky = 3, oddly_breakable_by_hand = 2},
   drop = "basics:charcoal_block"
 })
+
+minetest.register_craft({
+	type = "shapeless",
+	output = "basics:charcoal 9",
+	recipe = {
+		"basics:charcoal_block",
+	},
+})
